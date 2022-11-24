@@ -9,139 +9,209 @@
       Title="Covid" Background="#fff3f3f3">
 
     <Grid>
-        <ScrollViewer x:Name="Content" Width="414" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Foreground="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Top" VerticalScrollBarVisibility="Hidden" CanContentScroll="True" Panel.ZIndex="1">
-            <Grid Width="414" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.CanContentScroll="True">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="4*"/>
-                    <ColumnDefinition Width="65*"/>
-                </Grid.ColumnDefinitions>
-                <Border x:Name="sectionTerkini" HorizontalAlignment="Left" Height="230" Margin="14,10,0,0" VerticalAlignment="Top" Width="390" Background="#FFF3F3F3" CornerRadius="12,12,12,12" Grid.ColumnSpan="2">
-                    <Border.Effect>
-                        <DropShadowEffect BlurRadius="10" Opacity="0.25" Direction="270" RenderingBias="Quality"/>
-                    </Border.Effect>
-                    <Grid x:Name="gridTerkini" HorizontalAlignment="Center" Height="230" VerticalAlignment="Center" Width="390">
-                        <Label x:Name="labelTerkini" Content="Data Covid Terkini:" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Padding="0,0,0,0"/>
-                        <Border x:Name="labelSeluruhIndonesia" BorderThickness="1" HorizontalAlignment="Right" Height="22" Margin="0,8,8,0" VerticalAlignment="Top" Width="134" Background="#FF5F8D4E" CornerRadius="10,10,10,10" ScrollViewer.VerticalScrollBarVisibility="Disabled">
-                            <Label Content="Seluruh Indonesia" HorizontalAlignment="Center" VerticalAlignment="Center" Height="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" FontWeight="SemiBold" Foreground="White" Margin="0,-2,0,0"/>
-                        </Border>
-                        <Grid x:Name="statisticGroup" Height="188" Width="378" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,6">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="86*"/>
-                                <ColumnDefinition Width="103*"/>
-                            </Grid.ColumnDefinitions>
-                            <Border x:Name="statisticKasus" BorderThickness="1" HorizontalAlignment="Left" Height="92" VerticalAlignment="Top" Width="186" Background="White" CornerRadius="8,8,8,8" Grid.ColumnSpan="2">
-                                <Grid Width="186" Height="92" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                    <Label Content="Kasus" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD9534F" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="61,24,0,0" FontSize="10"/>
-                                    <Label x:Name="labelJumlah" Content="2879008" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD9534F" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="61,33,0,0" FontSize="28" FontWeight="Medium"/>
-                                </Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Hidden">
+            <Grid>
+                <StackPanel>
+                    <Label Content="Covid Statistics" Padding="0,0,0,0" FontSize="20" FontWeight="SemiBold" Margin="22,30,0,0"/>
+                    <Border x:Name="sectionTerkini" Height="230" Width="390" Background="#FFA4BE7B" CornerRadius="12,12,12,12" Margin="0,16,0,0">
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="10" Opacity="0.25" Direction="270" RenderingBias="Quality"/>
+                        </Border.Effect>
+                        <Grid x:Name="gridTerkini" HorizontalAlignment="Center" Height="230" VerticalAlignment="Center" Width="390">
+                            <Label x:Name="labelTerkini" Content="Data Covid Terkini:" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Padding="0,0,0,0" Foreground="White"/>
+                            <Border x:Name="labelSeluruhIndonesia" BorderThickness="1" HorizontalAlignment="Right" Height="22" Margin="0,8,8,0" VerticalAlignment="Top" Width="134" Background="#FFE5D9B6" CornerRadius="10,10,10,10" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                                <Label Content="Seluruh Indonesia" HorizontalAlignment="Center" VerticalAlignment="Center" Height="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" FontWeight="SemiBold" Margin="0,-2,0,0"/>
                             </Border>
-                            <Border x:Name="statisticDirawat" BorderThickness="1" HorizontalAlignment="Right" Height="92" VerticalAlignment="Top" Width="186" Background="White" CornerRadius="8,8,8,8" Grid.Column="1">
-                                <Grid Width="186" Height="92" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                    <Label Content="Dirawat" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFF0AD4E" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="61,24,0,0" FontSize="10"/>
-                                    <Label x:Name="labelJumlahDirawat" Content="2879008" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFF0AD4E" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="61,33,0,0" FontSize="28" FontWeight="Medium"/>
-                                </Grid>
-                            </Border>
-                            <Border x:Name="statisticSembuh" BorderThickness="1" HorizontalAlignment="Left" Height="92" VerticalAlignment="Bottom" Width="186" Background="White" CornerRadius="8,8,8,8" Grid.ColumnSpan="2">
-                                <Grid Width="186" Height="92" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                    <Label Content="Sembuh" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF5CB85C" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="61,24,0,0" FontSize="10"/>
-                                    <Label x:Name="labelJumlahSembuh" Content="2879008" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF5CB85C" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="61,33,0,0" FontSize="28" FontWeight="Medium"/>
-                                </Grid>
-                            </Border>
-                            <Border x:Name="statisticMeninggal" BorderThickness="1" HorizontalAlignment="Right" Height="92" VerticalAlignment="Bottom" Width="186" Background="White" CornerRadius="8,8,8,8" Grid.Column="1">
-                                <Grid Width="186" Height="92" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                    <Label Content="Meninggal" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF292B2C" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="61,24,0,0" FontSize="10"/>
-                                    <Label x:Name="labelJumlahMeninggal" Content="2879008" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF292B2C" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="61,33,0,0" FontSize="28" FontWeight="Medium"/>
-                                </Grid>
-                            </Border>
+                            <Grid x:Name="statisticGroup" Height="188" Width="378" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,6">
+                                <Border x:Name="statisticKasus" BorderThickness="1" HorizontalAlignment="Left" Height="92" VerticalAlignment="Top" Width="186" Background="White" CornerRadius="8,8,8,8">
+                                    <Grid Width="186" Height="92" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Label Content="Kasus" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD9534F" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="64,24,0,0" FontSize="10"/>
+                                        <Label x:Name="labelJumlah" Content="2879008" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD9534F" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="64,33,0,0" FontSize="28" FontWeight="Medium"/>
+                                        <Rectangle HorizontalAlignment="Left" Height="48" Margin="12,0,0,0" VerticalAlignment="Center" Width="48">
+                                            <Rectangle.Fill>
+                                                <ImageBrush ImageSource="/Assets/Images/kasus.png"/>
+                                            </Rectangle.Fill>
+                                        </Rectangle>
+                                    </Grid>
+                                </Border>
+                                <Border x:Name="statisticDirawat" BorderThickness="1" HorizontalAlignment="Right" Height="92" VerticalAlignment="Top" Width="186" Background="White" CornerRadius="8,8,8,8">
+                                    <Grid Width="186" Height="92" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Label Content="Dirawat" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFF0AD4E" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="64,24,0,0" FontSize="10"/>
+                                        <Label x:Name="labelJumlahDirawat" Content="2879008" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFF0AD4E" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="64,33,0,0" FontSize="28" FontWeight="Medium"/>
+                                        <Rectangle HorizontalAlignment="Left" Height="48" Margin="12,0,0,0" VerticalAlignment="Center" Width="48">
+                                            <Rectangle.Fill>
+                                                <ImageBrush ImageSource="/Assets/Images/dirawat.png"/>
+                                            </Rectangle.Fill>
+                                        </Rectangle>
+                                    </Grid>
+                                </Border>
+                                <Border x:Name="statisticSembuh" BorderThickness="1" HorizontalAlignment="Left" Height="92" VerticalAlignment="Bottom" Width="186" Background="White" CornerRadius="8,8,8,8">
+                                    <Grid Width="186" Height="92" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Label Content="Sembuh" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF5CB85C" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="64,24,0,0" FontSize="10"/>
+                                        <Label x:Name="labelJumlahSembuh" Content="2879008" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF5CB85C" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="64,33,0,0" FontSize="28" FontWeight="Medium"/>
+                                        <Rectangle HorizontalAlignment="Left" Height="48" Margin="14,0,0,0" VerticalAlignment="Center" Width="38.59">
+                                            <Rectangle.Fill>
+                                                <ImageBrush ImageSource="/Assets/Images/sembuh.png"/>
+                                            </Rectangle.Fill>
+                                        </Rectangle>
+                                    </Grid>
+                                </Border>
+                                <Border x:Name="statisticMeninggal" BorderThickness="1" HorizontalAlignment="Right" Height="92" VerticalAlignment="Bottom" Width="186" Background="White" CornerRadius="8,8,8,8">
+                                    <Grid Width="186" Height="92" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Label Content="Meninggal" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF292B2C" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="64,24,0,0" FontSize="10"/>
+                                        <Label x:Name="labelJumlahMeninggal" Content="2879008" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF292B2C" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="64,33,0,0" FontSize="28" FontWeight="Medium"/>
+                                        <Rectangle HorizontalAlignment="Left" Height="48" Margin="14,0,0,0" VerticalAlignment="Center" Width="38.77">
+                                            <Rectangle.Fill>
+                                                <ImageBrush ImageSource="/Assets/Images/meninggal.png"/>
+                                            </Rectangle.Fill>
+                                        </Rectangle>
+                                    </Grid>
+                                </Border>
+                            </Grid>
                         </Grid>
-                    </Grid>
-                </Border>
-                <Border x:Name="sectionTerkini_Copy" HorizontalAlignment="Left" Height="230" Margin="14,251,0,0" VerticalAlignment="Top" Width="390" Background="#FFF3F3F3" Grid.ColumnSpan="2" CornerRadius="12,12,12,12">
-                    <Border.Effect>
-                        <DropShadowEffect BlurRadius="10" Opacity="0.25" Direction="270" RenderingBias="Quality"/>
-                    </Border.Effect>
-                    <Grid x:Name="gridTerkini1" HorizontalAlignment="Center" Height="230" VerticalAlignment="Center" Width="390">
-                        <Label x:Name="labelTerkini1" Content="Data Covid Terkini:" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Padding="0,0,0,0"/>
-                        <Border x:Name="labelSeluruhIndonesia1" BorderThickness="1" HorizontalAlignment="Right" Height="22" Margin="0,8,8,0" VerticalAlignment="Top" Width="134" Background="#FF5F8D4E" CornerRadius="10,10,10,10" ScrollViewer.VerticalScrollBarVisibility="Disabled">
-                            <Label Content="Seluruh Indonesia" HorizontalAlignment="Center" VerticalAlignment="Center" Height="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" FontWeight="SemiBold" Foreground="White" Margin="0,-2,0,0"/>
+                    </Border>
+                    <Label Content="Data per-Provinsi" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="22,24,0,0" FontSize="20" FontWeight="SemiBold"/>
+                    <StackPanel x:Name="groupOfProvinsi" Margin="0,16,0,0" Width="390" HorizontalAlignment="Center">
+                        <Border x:Name="provinsiChild" BorderThickness="1" Height="89" CornerRadius="10,10,10,10" Background="White">
+                            <Grid>
+                                <Label x:Name="provinceName" Content="Daerah Istimewa Yogyakarta" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" FontWeight="SemiBold" Margin="0,12,0,0" Padding="0,0,0,0"/>
+                                <StackPanel Orientation="Horizontal" Margin="26,40,26,0" VerticalAlignment="Top">
+                                    <StackPanel x:Name="kasus" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,46,0">
+                                        <Label Content="Kasus" FontWeight="Medium" HorizontalAlignment="Center" Padding="0,0,0,0" VerticalAlignment="Center" Foreground="#FFD9534F"/>
+                                        <Label Content="27809" FontWeight="Medium" Padding="0,0,0,0" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFD9534F"/>
+                                    </StackPanel>
+                                    <StackPanel x:Name="dirawat" Margin="0,0,46,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Label Content="Dirawat" FontWeight="Medium" HorizontalAlignment="Center" Padding="0,0,0,0" VerticalAlignment="Center" Foreground="#FFF0AD4E"/>
+                                        <Label Content="27809" FontWeight="Medium" Padding="0,0,0,0" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFF0AD4E"/>
+                                    </StackPanel>
+                                    <StackPanel x:Name="sembuh" Margin="0,0,46,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Label Content="Sembuh" FontWeight="Medium" HorizontalAlignment="Center" Padding="0,0,0,0" VerticalAlignment="Center" Foreground="#FF5CB85C"/>
+                                        <Label Content="27809" FontWeight="Medium" Padding="0,0,0,0" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF5CB85C"/>
+                                    </StackPanel>
+                                    <StackPanel x:Name="meninggal" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                                        <Label Content="Meninggal" FontWeight="Medium" HorizontalAlignment="Center" Padding="0,0,0,0" VerticalAlignment="Center"/>
+                                        <Label Content="27809" FontWeight="Medium" Padding="0,0,0,0" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
                         </Border>
-                        <Grid x:Name="statisticGroup1" Height="188" Width="378" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,6">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="86*"/>
-                                <ColumnDefinition Width="103*"/>
-                            </Grid.ColumnDefinitions>
-                            <Border x:Name="statisticKasus1" BorderThickness="1" HorizontalAlignment="Left" Height="92" VerticalAlignment="Top" Width="186" Background="White" CornerRadius="8,8,8,8" Grid.ColumnSpan="2">
-                                <Grid Width="186" Height="92" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                    <Label Content="Kasus" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD9534F" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="61,24,0,0" FontSize="10"/>
-                                    <Label x:Name="labelJumlah1" Content="2879008" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD9534F" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="61,33,0,0" FontSize="28" FontWeight="Medium"/>
-                                </Grid>
-                            </Border>
-                            <Border x:Name="statisticDirawat1" BorderThickness="1" HorizontalAlignment="Right" Height="92" VerticalAlignment="Top" Width="186" Background="White" CornerRadius="8,8,8,8" Grid.Column="1">
-                                <Grid Width="186" Height="92" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                    <Label Content="Dirawat" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFF0AD4E" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="61,24,0,0" FontSize="10"/>
-                                    <Label x:Name="labelJumlahDirawat1" Content="2879008" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFF0AD4E" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="61,33,0,0" FontSize="28" FontWeight="Medium"/>
-                                </Grid>
-                            </Border>
-                            <Border x:Name="statisticSembuh1" BorderThickness="1" HorizontalAlignment="Left" Height="92" VerticalAlignment="Bottom" Width="186" Background="White" CornerRadius="8,8,8,8" Grid.ColumnSpan="2">
-                                <Grid Width="186" Height="92" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                    <Label Content="Sembuh" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF5CB85C" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="61,24,0,0" FontSize="10"/>
-                                    <Label x:Name="labelJumlahSembuh1" Content="2879008" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF5CB85C" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="61,33,0,0" FontSize="28" FontWeight="Medium"/>
-                                </Grid>
-                            </Border>
-                            <Border x:Name="statisticMeninggal1" BorderThickness="1" HorizontalAlignment="Right" Height="92" VerticalAlignment="Bottom" Width="186" Background="White" CornerRadius="8,8,8,8" Grid.Column="1">
-                                <Grid Width="186" Height="92" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                    <Label Content="Meninggal" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF292B2C" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="61,24,0,0" FontSize="10"/>
-                                    <Label x:Name="labelJumlahMeninggal1" Content="2879008" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF292B2C" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="61,33,0,0" FontSize="28" FontWeight="Medium"/>
-                                </Grid>
-                            </Border>
-                        </Grid>
-                    </Grid>
-                </Border>
-                <Border x:Name="sectionTerkini_Copy1" HorizontalAlignment="Left" Margin="14,494,0,0" Width="390" Background="#FFF3F3F3" Grid.ColumnSpan="2" CornerRadius="12,12,12,12" Height="230" VerticalAlignment="Top">
-                    <Border.Effect>
-                        <DropShadowEffect BlurRadius="10" Opacity="0.25" Direction="270" RenderingBias="Quality"/>
-                    </Border.Effect>
-                    <Grid x:Name="gridTerkini2" HorizontalAlignment="Center" Height="230" VerticalAlignment="Center" Width="390">
-                        <Label x:Name="labelTerkini2" Content="Data Covid Terkini:" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top" FontWeight="SemiBold" Padding="0,0,0,0"/>
-                        <Border x:Name="labelSeluruhIndonesia2" BorderThickness="1" HorizontalAlignment="Right" Height="22" Margin="0,8,8,0" VerticalAlignment="Top" Width="134" Background="#FF5F8D4E" CornerRadius="10,10,10,10" ScrollViewer.VerticalScrollBarVisibility="Disabled">
-                            <Label Content="Seluruh Indonesia" HorizontalAlignment="Center" VerticalAlignment="Center" Height="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="0,0,0,0" FontWeight="SemiBold" Foreground="White" Margin="0,-2,0,0"/>
+                        <Border x:Name="provinsiChild_Copy" BorderThickness="1" Height="89" CornerRadius="10,10,10,10" Background="White" Margin="0,8,0,0">
+                            <Grid>
+                                <Label x:Name="provinceName1" Content="Jawa Tengah" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" FontWeight="SemiBold" Margin="0,12,0,0" Padding="0,0,0,0"/>
+                                <StackPanel Orientation="Horizontal" Margin="26,40,26,0" VerticalAlignment="Top">
+                                    <StackPanel x:Name="kasus1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,46,0">
+                                        <Label Content="Kasus" FontWeight="Medium" HorizontalAlignment="Center" Padding="0,0,0,0" VerticalAlignment="Center" Foreground="#FFD9534F"/>
+                                        <Label Content="27809" FontWeight="Medium" Padding="0,0,0,0" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFD9534F"/>
+                                    </StackPanel>
+                                    <StackPanel x:Name="dirawat1" Margin="0,0,46,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Label Content="Dirawat" FontWeight="Medium" HorizontalAlignment="Center" Padding="0,0,0,0" VerticalAlignment="Center" Foreground="#FFF0AD4E"/>
+                                        <Label Content="27809" FontWeight="Medium" Padding="0,0,0,0" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFF0AD4E"/>
+                                    </StackPanel>
+                                    <StackPanel x:Name="sembuh1" Margin="0,0,46,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Label Content="Sembuh" FontWeight="Medium" HorizontalAlignment="Center" Padding="0,0,0,0" VerticalAlignment="Center" Foreground="#FF5CB85C"/>
+                                        <Label Content="27809" FontWeight="Medium" Padding="0,0,0,0" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF5CB85C"/>
+                                    </StackPanel>
+                                    <StackPanel x:Name="meninggal1" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                                        <Label Content="Meninggal" FontWeight="Medium" HorizontalAlignment="Center" Padding="0,0,0,0" VerticalAlignment="Center"/>
+                                        <Label Content="27809" FontWeight="Medium" Padding="0,0,0,0" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
                         </Border>
-                        <Grid x:Name="statisticGroup2" Height="188" Width="378" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,6">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="86*"/>
-                                <ColumnDefinition Width="103*"/>
-                            </Grid.ColumnDefinitions>
-                            <Border x:Name="statisticKasus2" BorderThickness="1" HorizontalAlignment="Left" Height="92" VerticalAlignment="Top" Width="186" Background="White" CornerRadius="8,8,8,8" Grid.ColumnSpan="2">
-                                <Grid Width="186" Height="92" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                    <Label Content="Kasus" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD9534F" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="61,24,0,0" FontSize="10"/>
-                                    <Label x:Name="labelJumlah2" Content="2879008" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFD9534F" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="61,33,0,0" FontSize="28" FontWeight="Medium"/>
-                                </Grid>
-                            </Border>
-                            <Border x:Name="statisticDirawat2" BorderThickness="1" HorizontalAlignment="Right" Height="92" VerticalAlignment="Top" Width="186" Background="White" CornerRadius="8,8,8,8" Grid.Column="1">
-                                <Grid Width="186" Height="92" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="185*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Label Content="Dirawat" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFF0AD4E" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="60,24,0,0" FontSize="10" Grid.Column="1"/>
-                                    <Label x:Name="labelJumlahDirawat2" Content="2879008" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFF0AD4E" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="60,33,0,0" FontSize="28" FontWeight="Medium" Grid.Column="1"/>
-                                </Grid>
-                            </Border>
-                            <Border x:Name="statisticSembuh2" BorderThickness="1" HorizontalAlignment="Left" Height="92" VerticalAlignment="Bottom" Width="186" Background="White" CornerRadius="8,8,8,8" Grid.ColumnSpan="2">
-                                <Grid Width="186" Height="92" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                    <Label Content="Sembuh" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF5CB85C" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="61,24,0,0" FontSize="10"/>
-                                    <Label x:Name="labelJumlahSembuh2" Content="2879008" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF5CB85C" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="61,33,0,0" FontSize="28" FontWeight="Medium"/>
-                                </Grid>
-                            </Border>
-                            <Border x:Name="statisticMeninggal2" BorderThickness="1" HorizontalAlignment="Right" Height="92" VerticalAlignment="Bottom" Width="186" Background="White" CornerRadius="8,8,8,8" Grid.Column="1">
-                                <Grid Width="186" Height="92" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                    <Label Content="Meninggal" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF292B2C" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="61,24,0,0" FontSize="10"/>
-                                    <Label x:Name="labelJumlahMeninggal2" Content="2879008" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF292B2C" Padding="0,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="61,33,0,0" FontSize="28" FontWeight="Medium"/>
-                                </Grid>
-                            </Border>
-                        </Grid>
-                    </Grid>
-                </Border>
+                        <Border x:Name="provinsiChild_Copy1" BorderThickness="1" Height="89" CornerRadius="10,10,10,10" Background="White" Margin="0,8,0,0">
+                            <Grid>
+                                <Label x:Name="provinceName2" Content="Jawa Timur" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" FontWeight="SemiBold" Margin="0,12,0,0" Padding="0,0,0,0"/>
+                                <StackPanel Orientation="Horizontal" Margin="26,40,26,0" VerticalAlignment="Top">
+                                    <StackPanel x:Name="kasus2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,46,0">
+                                        <Label Content="Kasus" FontWeight="Medium" HorizontalAlignment="Center" Padding="0,0,0,0" VerticalAlignment="Center" Foreground="#FFD9534F"/>
+                                        <Label Content="27809" FontWeight="Medium" Padding="0,0,0,0" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFD9534F"/>
+                                    </StackPanel>
+                                    <StackPanel x:Name="dirawat2" Margin="0,0,46,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Label Content="Dirawat" FontWeight="Medium" HorizontalAlignment="Center" Padding="0,0,0,0" VerticalAlignment="Center" Foreground="#FFF0AD4E"/>
+                                        <Label Content="27809" FontWeight="Medium" Padding="0,0,0,0" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFF0AD4E"/>
+                                    </StackPanel>
+                                    <StackPanel x:Name="sembuh2" Margin="0,0,46,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Label Content="Sembuh" FontWeight="Medium" HorizontalAlignment="Center" Padding="0,0,0,0" VerticalAlignment="Center" Foreground="#FF5CB85C"/>
+                                        <Label Content="27809" FontWeight="Medium" Padding="0,0,0,0" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF5CB85C"/>
+                                    </StackPanel>
+                                    <StackPanel x:Name="meninggal2" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                                        <Label Content="Meninggal" FontWeight="Medium" HorizontalAlignment="Center" Padding="0,0,0,0" VerticalAlignment="Center"/>
+                                        <Label Content="27809" FontWeight="Medium" Padding="0,0,0,0" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                        <Border x:Name="provinsiChild_Copy2" BorderThickness="1" Height="89" CornerRadius="10,10,10,10" Background="White" Margin="0,8,0,0">
+                            <Grid>
+                                <Label x:Name="provinceName3" Content="Jawa Barat" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" FontWeight="SemiBold" Margin="0,12,0,0" Padding="0,0,0,0"/>
+                                <StackPanel Orientation="Horizontal" Margin="26,40,26,0" VerticalAlignment="Top">
+                                    <StackPanel x:Name="kasus3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,46,0">
+                                        <Label Content="Kasus" FontWeight="Medium" HorizontalAlignment="Center" Padding="0,0,0,0" VerticalAlignment="Center" Foreground="#FFD9534F"/>
+                                        <Label Content="27809" FontWeight="Medium" Padding="0,0,0,0" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFD9534F"/>
+                                    </StackPanel>
+                                    <StackPanel x:Name="dirawat3" Margin="0,0,46,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Label Content="Dirawat" FontWeight="Medium" HorizontalAlignment="Center" Padding="0,0,0,0" VerticalAlignment="Center" Foreground="#FFF0AD4E"/>
+                                        <Label Content="27809" FontWeight="Medium" Padding="0,0,0,0" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFF0AD4E"/>
+                                    </StackPanel>
+                                    <StackPanel x:Name="sembuh3" Margin="0,0,46,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Label Content="Sembuh" FontWeight="Medium" HorizontalAlignment="Center" Padding="0,0,0,0" VerticalAlignment="Center" Foreground="#FF5CB85C"/>
+                                        <Label Content="27809" FontWeight="Medium" Padding="0,0,0,0" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF5CB85C"/>
+                                    </StackPanel>
+                                    <StackPanel x:Name="meninggal3" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                                        <Label Content="Meninggal" FontWeight="Medium" HorizontalAlignment="Center" Padding="0,0,0,0" VerticalAlignment="Center"/>
+                                        <Label Content="27809" FontWeight="Medium" Padding="0,0,0,0" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                        <Border x:Name="provinsiChild_Copy3" BorderThickness="1" Height="89" CornerRadius="10,10,10,10" Background="White" Margin="0,8,0,0">
+                            <Grid>
+                                <Label x:Name="provinceName4" Content="Yogyakarta" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" FontWeight="SemiBold" Margin="0,12,0,0" Padding="0,0,0,0"/>
+                                <StackPanel Orientation="Horizontal" Margin="26,40,26,0" VerticalAlignment="Top">
+                                    <StackPanel x:Name="kasus4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,46,0">
+                                        <Label Content="Kasus" FontWeight="Medium" HorizontalAlignment="Center" Padding="0,0,0,0" VerticalAlignment="Center" Foreground="#FFD9534F"/>
+                                        <Label Content="27809" FontWeight="Medium" Padding="0,0,0,0" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFD9534F"/>
+                                    </StackPanel>
+                                    <StackPanel x:Name="dirawat4" Margin="0,0,46,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Label Content="Dirawat" FontWeight="Medium" HorizontalAlignment="Center" Padding="0,0,0,0" VerticalAlignment="Center" Foreground="#FFF0AD4E"/>
+                                        <Label Content="27809" FontWeight="Medium" Padding="0,0,0,0" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFF0AD4E"/>
+                                    </StackPanel>
+                                    <StackPanel x:Name="sembuh4" Margin="0,0,46,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Label Content="Sembuh" FontWeight="Medium" HorizontalAlignment="Center" Padding="0,0,0,0" VerticalAlignment="Center" Foreground="#FF5CB85C"/>
+                                        <Label Content="27809" FontWeight="Medium" Padding="0,0,0,0" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF5CB85C"/>
+                                    </StackPanel>
+                                    <StackPanel x:Name="meninggal4" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                                        <Label Content="Meninggal" FontWeight="Medium" HorizontalAlignment="Center" Padding="0,0,0,0" VerticalAlignment="Center"/>
+                                        <Label Content="27809" FontWeight="Medium" Padding="0,0,0,0" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                        <Border x:Name="provinsiChild_Copy4" BorderThickness="1" Height="89" CornerRadius="10,10,10,10" Background="White" Margin="0,8,0,0">
+                            <Grid>
+                                <Label x:Name="provinceName5" Content="Yogyakarta" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" FontWeight="SemiBold" Margin="0,12,0,0" Padding="0,0,0,0"/>
+                                <StackPanel Orientation="Horizontal" Margin="26,40,26,0" VerticalAlignment="Top">
+                                    <StackPanel x:Name="kasus5" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,46,0">
+                                        <Label Content="Kasus" FontWeight="Medium" HorizontalAlignment="Center" Padding="0,0,0,0" VerticalAlignment="Center" Foreground="#FFD9534F"/>
+                                        <Label Content="27809" FontWeight="Medium" Padding="0,0,0,0" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFD9534F"/>
+                                    </StackPanel>
+                                    <StackPanel x:Name="dirawat5" Margin="0,0,46,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Label Content="Dirawat" FontWeight="Medium" HorizontalAlignment="Center" Padding="0,0,0,0" VerticalAlignment="Center" Foreground="#FFF0AD4E"/>
+                                        <Label Content="27809" FontWeight="Medium" Padding="0,0,0,0" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFF0AD4E"/>
+                                    </StackPanel>
+                                    <StackPanel x:Name="sembuh5" Margin="0,0,46,0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Label Content="Sembuh" FontWeight="Medium" HorizontalAlignment="Center" Padding="0,0,0,0" VerticalAlignment="Center" Foreground="#FF5CB85C"/>
+                                        <Label Content="27809" FontWeight="Medium" Padding="0,0,0,0" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF5CB85C"/>
+                                    </StackPanel>
+                                    <StackPanel x:Name="meninggal5" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                                        <Label Content="Meninggal" FontWeight="Medium" HorizontalAlignment="Center" Padding="0,0,0,0" VerticalAlignment="Center"/>
+                                        <Label Content="27809" FontWeight="Medium" Padding="0,0,0,0" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </StackPanel>
+                </StackPanel>
             </Grid>
         </ScrollViewer>
     </Grid>

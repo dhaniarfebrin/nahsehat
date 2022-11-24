@@ -5,100 +5,102 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:NahSehat"
       mc:Ignorable="d" d:DesignWidth="414"
-      Title="Dieseas" Height="1077">
+      Title="Dieseas" Height="736">
 
-    <Grid Background="#FFF3F3F3" ScrollViewer.CanContentScroll="True">
+    <Grid Background="#FFF3F3F3" ScrollViewer.CanContentScroll="True" VerticalAlignment="Top">
         <ScrollViewer VerticalScrollBarVisibility="Hidden" CanContentScroll="True">
-            <StackPanel ScrollViewer.CanContentScroll="True" Height="942">
-                <Grid x:Name="groupOfSearch" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Width="390" Margin="0,24,0,0">
-                    <Border BorderThickness="1" CornerRadius="18,18,18,18" Background="White" BorderBrush="#FF5F8D4E">
-                        <Border.Effect>
-                            <DropShadowEffect Direction="300" BlurRadius="12" Opacity="0.35"/>
-                        </Border.Effect>
-                    </Border>
-                    <Rectangle HorizontalAlignment="Left" Height="24" Margin="14,0,0,0" VerticalAlignment="Center" Width="24">
-                        <Rectangle.Fill>
-                            <ImageBrush ImageSource="/Assets/Images/search-normal.png"/>
-                        </Rectangle.Fill>
-                    </Rectangle>
-                    <TextBox x:Name="searchBox" HorizontalAlignment="Left" Height="20" Margin="48,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="332" TextChanged="TextBox_TextChanged" SelectionBrush="{x:Null}" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="14" AutomationProperties.HelpText="sajkdhfkjashfk" AutomationProperties.Name="searchBar" Text="Cari Penyakit..." BorderThickness="0,0,0,0"/>
-                </Grid>
-                <Label Content="Types of Diseases" Padding="0,0,0,0" FontSize="20" FontWeight="SemiBold" Margin="22,24,0,0"/>
-                <StackPanel x:Name="groupOfNews" Width="390" Height="870" Margin="0,18,0,0">
-                    <Border x:Name="newsChild_Copy8" BorderThickness="1" Height="108" Background="White" CornerRadius="12,12,12,12" Padding="6,6,6,6">
-                        <Grid>
-                            <Border BorderThickness="1" HorizontalAlignment="Left" Height="94" VerticalAlignment="Center" Width="138" Background="#FF615F5F" CornerRadius="8,8,8,8"/>
-                            <Grid x:Name="Text9" Width="212" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="152,0,0,0" Height="94" ScrollViewer.VerticalScrollBarVisibility="Disabled">
-                                <TextBlock x:Name="titleNews18" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Foreground="#FF285430" Width="212" Height="30" FontWeight="SemiBold"/>
-                                <TextBlock x:Name="bodyTextNews18" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita,lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Width="212" Height="58" Margin="0,32,0,0" FontSize="8" FontWeight="Light" Foreground="Black"/>
+            <Grid>
+                <StackPanel ScrollViewer.CanContentScroll="True" Height="942">
+                    <Grid x:Name="groupOfSearch" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Width="390" Margin="0,24,0,0">
+                        <Border BorderThickness="1" CornerRadius="18,18,18,18" Background="White" BorderBrush="#FF5F8D4E">
+                            <Border.Effect>
+                                <DropShadowEffect Direction="300" BlurRadius="12" Opacity="0.35"/>
+                            </Border.Effect>
+                        </Border>
+                        <Rectangle HorizontalAlignment="Left" Height="24" Margin="14,0,0,0" VerticalAlignment="Center" Width="24">
+                            <Rectangle.Fill>
+                                <ImageBrush ImageSource="/Assets/Images/search-normal.png"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <TextBox x:Name="searchBox" HorizontalAlignment="Left" Height="20" Margin="48,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="332" TextChanged="TextBox_TextChanged" SelectionBrush="{x:Null}" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="14" AutomationProperties.HelpText="sajkdhfkjashfk" AutomationProperties.Name="searchBar" Text="Cari Penyakit..." BorderThickness="0,0,0,0"/>
+                    </Grid>
+                    <Label Content="Types of Diseases" Padding="0,0,0,0" FontSize="20" FontWeight="SemiBold" Margin="22,24,0,0"/>
+                    <StackPanel x:Name="groupOfNews" Width="390" Height="870" Margin="0,18,0,0">
+                        <Border x:Name="newsChild_Copy8" BorderThickness="1" Height="108" Background="White" CornerRadius="12,12,12,12" Padding="6,6,6,6">
+                            <Grid>
+                                <Border BorderThickness="1" HorizontalAlignment="Left" Height="94" VerticalAlignment="Center" Width="138" Background="#FF615F5F" CornerRadius="8,8,8,8"/>
+                                <Grid x:Name="Text9" Width="212" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="152,0,0,0" Height="94" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                                    <TextBlock x:Name="titleNews18" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Foreground="#FF285430" Width="212" Height="30" FontWeight="SemiBold"/>
+                                    <TextBlock x:Name="bodyTextNews18" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita,lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Width="212" Height="58" Margin="0,32,0,0" FontSize="8" FontWeight="Light" Foreground="Black"/>
+                                </Grid>
                             </Grid>
-                        </Grid>
-                    </Border>
-                    <Border x:Name="newsChild_Copy" BorderThickness="1" Height="108" Background="White" CornerRadius="12,12,12,12" Padding="6,6,6,6" Margin="0,6,0,0">
-                        <Grid>
-                            <Border BorderThickness="1" HorizontalAlignment="Left" Height="94" VerticalAlignment="Center" Width="138" Background="#FF615F5F" CornerRadius="8,8,8,8"/>
-                            <Grid x:Name="Text1" Width="212" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="152,0,0,0" Height="94" ScrollViewer.VerticalScrollBarVisibility="Disabled">
-                                <TextBlock x:Name="titleNews1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Foreground="#FF285430" Width="212" Height="30" FontWeight="SemiBold"/>
-                                <TextBlock x:Name="bodyTextNews1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita,lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Width="212" Height="58" Margin="0,32,0,0" FontSize="8" FontWeight="Light" Foreground="Black"/>
+                        </Border>
+                        <Border x:Name="newsChild_Copy" BorderThickness="1" Height="108" Background="White" CornerRadius="12,12,12,12" Padding="6,6,6,6" Margin="0,6,0,0">
+                            <Grid>
+                                <Border BorderThickness="1" HorizontalAlignment="Left" Height="94" VerticalAlignment="Center" Width="138" Background="#FF615F5F" CornerRadius="8,8,8,8"/>
+                                <Grid x:Name="Text1" Width="212" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="152,0,0,0" Height="94" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                                    <TextBlock x:Name="titleNews1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Foreground="#FF285430" Width="212" Height="30" FontWeight="SemiBold"/>
+                                    <TextBlock x:Name="bodyTextNews1" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita,lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Width="212" Height="58" Margin="0,32,0,0" FontSize="8" FontWeight="Light" Foreground="Black"/>
+                                </Grid>
                             </Grid>
-                        </Grid>
-                    </Border>
-                    <Border x:Name="newsChild_Copy1" BorderThickness="1" Height="108" Background="White" CornerRadius="12,12,12,12" Padding="6,6,6,6">
-                        <Grid>
-                            <Border BorderThickness="1" HorizontalAlignment="Left" Height="94" VerticalAlignment="Center" Width="138" Background="#FF615F5F" CornerRadius="8,8,8,8"/>
-                            <Grid x:Name="Text2" Width="212" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="152,0,0,0" Height="94" ScrollViewer.VerticalScrollBarVisibility="Disabled">
-                                <TextBlock x:Name="titleNews2" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Foreground="#FF285430" Width="212" Height="30" FontWeight="SemiBold"/>
-                                <TextBlock x:Name="bodyTextNews2" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita,lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Width="212" Height="58" Margin="0,32,0,0" FontSize="8" FontWeight="Light" Foreground="Black"/>
+                        </Border>
+                        <Border x:Name="newsChild_Copy1" BorderThickness="1" Height="108" Background="White" CornerRadius="12,12,12,12" Padding="6,6,6,6">
+                            <Grid>
+                                <Border BorderThickness="1" HorizontalAlignment="Left" Height="94" VerticalAlignment="Center" Width="138" Background="#FF615F5F" CornerRadius="8,8,8,8"/>
+                                <Grid x:Name="Text2" Width="212" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="152,0,0,0" Height="94" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                                    <TextBlock x:Name="titleNews2" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Foreground="#FF285430" Width="212" Height="30" FontWeight="SemiBold"/>
+                                    <TextBlock x:Name="bodyTextNews2" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita,lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Width="212" Height="58" Margin="0,32,0,0" FontSize="8" FontWeight="Light" Foreground="Black"/>
+                                </Grid>
                             </Grid>
-                        </Grid>
-                    </Border>
-                    <Border x:Name="newsChild_Copy2" BorderThickness="1" Height="108" Background="White" CornerRadius="12,12,12,12" Padding="6,6,6,6">
-                        <Grid>
-                            <Border BorderThickness="1" HorizontalAlignment="Left" Height="94" VerticalAlignment="Center" Width="138" Background="#FF615F5F" CornerRadius="8,8,8,8"/>
-                            <Grid x:Name="Text3" Width="212" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="152,0,0,0" Height="94" ScrollViewer.VerticalScrollBarVisibility="Disabled">
-                                <TextBlock x:Name="titleNews3" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Foreground="#FF285430" Width="212" Height="30" FontWeight="SemiBold"/>
-                                <TextBlock x:Name="bodyTextNews3" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita,lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Width="212" Height="58" Margin="0,32,0,0" FontSize="8" FontWeight="Light" Foreground="Black"/>
+                        </Border>
+                        <Border x:Name="newsChild_Copy2" BorderThickness="1" Height="108" Background="White" CornerRadius="12,12,12,12" Padding="6,6,6,6">
+                            <Grid>
+                                <Border BorderThickness="1" HorizontalAlignment="Left" Height="94" VerticalAlignment="Center" Width="138" Background="#FF615F5F" CornerRadius="8,8,8,8"/>
+                                <Grid x:Name="Text3" Width="212" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="152,0,0,0" Height="94" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                                    <TextBlock x:Name="titleNews3" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Foreground="#FF285430" Width="212" Height="30" FontWeight="SemiBold"/>
+                                    <TextBlock x:Name="bodyTextNews3" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita,lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Width="212" Height="58" Margin="0,32,0,0" FontSize="8" FontWeight="Light" Foreground="Black"/>
+                                </Grid>
                             </Grid>
-                        </Grid>
-                    </Border>
-                    <Border x:Name="newsChild_Copy3" BorderThickness="1" Height="108" Background="White" CornerRadius="12,12,12,12" Padding="6,6,6,6">
-                        <Grid>
-                            <Border BorderThickness="1" HorizontalAlignment="Left" Height="94" VerticalAlignment="Center" Width="138" Background="#FF615F5F" CornerRadius="8,8,8,8"/>
-                            <Grid x:Name="Text4" Width="212" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="152,0,0,0" Height="94" ScrollViewer.VerticalScrollBarVisibility="Disabled">
-                                <TextBlock x:Name="titleNews4" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Foreground="#FF285430" Width="212" Height="30" FontWeight="SemiBold"/>
-                                <TextBlock x:Name="bodyTextNews4" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita,lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Width="212" Height="58" Margin="0,32,0,0" FontSize="8" FontWeight="Light" Foreground="Black"/>
+                        </Border>
+                        <Border x:Name="newsChild_Copy3" BorderThickness="1" Height="108" Background="White" CornerRadius="12,12,12,12" Padding="6,6,6,6">
+                            <Grid>
+                                <Border BorderThickness="1" HorizontalAlignment="Left" Height="94" VerticalAlignment="Center" Width="138" Background="#FF615F5F" CornerRadius="8,8,8,8"/>
+                                <Grid x:Name="Text4" Width="212" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="152,0,0,0" Height="94" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                                    <TextBlock x:Name="titleNews4" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Foreground="#FF285430" Width="212" Height="30" FontWeight="SemiBold"/>
+                                    <TextBlock x:Name="bodyTextNews4" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita,lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Width="212" Height="58" Margin="0,32,0,0" FontSize="8" FontWeight="Light" Foreground="Black"/>
+                                </Grid>
                             </Grid>
-                        </Grid>
-                    </Border>
-                    <Border x:Name="newsChild_Copy4" BorderThickness="1" Height="108" Background="White" CornerRadius="12,12,12,12" Padding="6,6,6,6">
-                        <Grid>
-                            <Border BorderThickness="1" HorizontalAlignment="Left" Height="94" VerticalAlignment="Center" Width="138" Background="#FF615F5F" CornerRadius="8,8,8,8"/>
-                            <Grid x:Name="Text5" Width="212" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="152,0,0,0" Height="94" ScrollViewer.VerticalScrollBarVisibility="Disabled">
-                                <TextBlock x:Name="titleNews5" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Foreground="#FF285430" Width="212" Height="30" FontWeight="SemiBold"/>
-                                <TextBlock x:Name="bodyTextNews5" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita,lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Width="212" Height="58" Margin="0,32,0,0" FontSize="8" FontWeight="Light" Foreground="Black"/>
+                        </Border>
+                        <Border x:Name="newsChild_Copy4" BorderThickness="1" Height="108" Background="White" CornerRadius="12,12,12,12" Padding="6,6,6,6">
+                            <Grid>
+                                <Border BorderThickness="1" HorizontalAlignment="Left" Height="94" VerticalAlignment="Center" Width="138" Background="#FF615F5F" CornerRadius="8,8,8,8"/>
+                                <Grid x:Name="Text5" Width="212" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="152,0,0,0" Height="94" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                                    <TextBlock x:Name="titleNews5" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Foreground="#FF285430" Width="212" Height="30" FontWeight="SemiBold"/>
+                                    <TextBlock x:Name="bodyTextNews5" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita,lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Width="212" Height="58" Margin="0,32,0,0" FontSize="8" FontWeight="Light" Foreground="Black"/>
+                                </Grid>
                             </Grid>
-                        </Grid>
-                    </Border>
-                    <Border x:Name="newsChild_Copy5" BorderThickness="1" Height="108" Background="White" CornerRadius="12,12,12,12" Padding="6,6,6,6">
-                        <Grid>
-                            <Border BorderThickness="1" HorizontalAlignment="Left" Height="94" VerticalAlignment="Center" Width="138" Background="#FF615F5F" CornerRadius="8,8,8,8"/>
-                            <Grid x:Name="Text6" Width="212" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="152,0,0,0" Height="94" ScrollViewer.VerticalScrollBarVisibility="Disabled">
-                                <TextBlock x:Name="titleNews6" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Foreground="#FF285430" Width="212" Height="30" FontWeight="SemiBold"/>
-                                <TextBlock x:Name="bodyTextNews6" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita,lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Width="212" Height="58" Margin="0,32,0,0" FontSize="8" FontWeight="Light" Foreground="Black"/>
+                        </Border>
+                        <Border x:Name="newsChild_Copy5" BorderThickness="1" Height="108" Background="White" CornerRadius="12,12,12,12" Padding="6,6,6,6">
+                            <Grid>
+                                <Border BorderThickness="1" HorizontalAlignment="Left" Height="94" VerticalAlignment="Center" Width="138" Background="#FF615F5F" CornerRadius="8,8,8,8"/>
+                                <Grid x:Name="Text6" Width="212" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="152,0,0,0" Height="94" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                                    <TextBlock x:Name="titleNews6" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Foreground="#FF285430" Width="212" Height="30" FontWeight="SemiBold"/>
+                                    <TextBlock x:Name="bodyTextNews6" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita,lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Width="212" Height="58" Margin="0,32,0,0" FontSize="8" FontWeight="Light" Foreground="Black"/>
+                                </Grid>
                             </Grid>
-                        </Grid>
-                    </Border>
-                    <Border x:Name="newsChild_Copy6" BorderThickness="1" Height="108" Background="White" CornerRadius="12,12,12,12" Padding="6,6,6,6">
-                        <Grid>
-                            <Border BorderThickness="1" HorizontalAlignment="Left" Height="94" VerticalAlignment="Center" Width="138" Background="#FF615F5F" CornerRadius="8,8,8,8"/>
-                            <Grid x:Name="Text7" Width="212" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="152,0,0,0" Height="94" ScrollViewer.VerticalScrollBarVisibility="Disabled">
-                                <TextBlock x:Name="titleNews7" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Foreground="#FF285430" Width="212" Height="30" FontWeight="SemiBold"/>
-                                <TextBlock x:Name="bodyTextNews7" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita,lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Width="212" Height="58" Margin="0,32,0,0" FontSize="8" FontWeight="Light" Foreground="Black"/>
+                        </Border>
+                        <Border x:Name="newsChild_Copy6" BorderThickness="1" Height="108" Background="White" CornerRadius="12,12,12,12" Padding="6,6,6,6">
+                            <Grid>
+                                <Border BorderThickness="1" HorizontalAlignment="Left" Height="94" VerticalAlignment="Center" Width="138" Background="#FF615F5F" CornerRadius="8,8,8,8"/>
+                                <Grid x:Name="Text7" Width="212" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="152,0,0,0" Height="94" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+                                    <TextBlock x:Name="titleNews7" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Foreground="#FF285430" Width="212" Height="30" FontWeight="SemiBold"/>
+                                    <TextBlock x:Name="bodyTextNews7" HorizontalAlignment="Center" TextWrapping="Wrap" Text="lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita, lorem ipsum dolor sit amet, ini adalah judul dari berita,lorem ipsum dolor sit amet, ini adalah judul dari berita" VerticalAlignment="Top" Width="212" Height="58" Margin="0,32,0,0" FontSize="8" FontWeight="Light" Foreground="Black"/>
+                                </Grid>
                             </Grid>
-                        </Grid>
-                    </Border>
+                        </Border>
+                    </StackPanel>
                 </StackPanel>
-            </StackPanel>
+            </Grid>
         </ScrollViewer>
 
     </Grid>
